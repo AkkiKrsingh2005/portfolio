@@ -20,7 +20,7 @@ const Career = () => {
               </div>
             </div>
             <p>
-              Advanced Data Structures & Algorithms (ADA), Advanced Programming, Full Stack Development.
+              Advanced Data Structures & Algorithms (ADA), Advanced Programming, Artificial Intelligence.
             </p>
           </div>
           <div className="career-info-box">
