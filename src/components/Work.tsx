@@ -4,6 +4,18 @@ import WorkImage from "./WorkImage";
 
 const projects = [
   {
+    title: "Smart Traffic Monitoring System",
+    category: "AI & Computer Vision",
+    description: "A comprehensive real-time traffic analysis system utilizing YOLOv8 for vehicle trajectory tracking, DeepSORT for stable IDs, and EasyOCR for fallback license plate detection.",
+    tags: ["OpenCV", "YOLOv8", "DeepSORT", "EasyOCR", "Python"],
+    image: "/images/smart_traffic.png",
+    video: "traffic_demo.mp4",
+    github: "https://github.com/ankitkumar572005/Smart-Traffic-System",
+    demo: null,
+    pinned: true,
+    accent: "#ef4444"
+  },
+  {
     title: "AI RAG Navigator",
     category: "LLM & RAG Application",
     description: "An enterprise-grade document chat system using Retrieval-Augmented Generation. Upload PDFs and have intelligent, context-aware conversations powered by Google Gemini.",
@@ -179,7 +191,7 @@ const Work = () => {
               <div className="slide-image-wrap">
                 <div className="slide-image-glow" style={{ background: `radial-gradient(circle, ${proj.accent}20 0%, transparent 70%)` }}></div>
                 {proj.image
-                  ? <WorkImage image={proj.image} alt={proj.title} />
+                  ? <WorkImage image={proj.image} alt={proj.title} video={proj.video} />
                   : <div className="no-image-placeholder">No Preview</div>
                 }
               </div>
