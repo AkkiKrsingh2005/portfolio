@@ -17,7 +17,7 @@ const ResumeModal = ({ onClose }: { onClose: () => void }) => (
         </div>
         <div className="rm-contacts">
           <a href="mailto:ak508887@gmail.com">ak508887@gmail.com</a>
-          <a href="https://github.com/AkkiKrsingh2005" target="_blank" rel="noreferrer">github.com/AkkiKrsingh2005</a>
+          <a href="https://github.com/ankitkumar572005" target="_blank" rel="noreferrer">github.com/ankitkumar572005</a>
           <a href="https://www.linkedin.com/in/ankit-kumar-821003327/" target="_blank" rel="noreferrer">linkedin.com/in/ankit-kumar-821003327</a>
         </div>
       </div>
@@ -170,7 +170,7 @@ const SocialIcons = () => {
       <div className="icons-section">
         <div className="social-icons" data-cursor="icons" id="social">
           <span>
-            <a href="https://github.com/AkkiKrsingh2005" target="_blank">
+            <a href="https://github.com/ankitkumar572005" target="_blank">
               <FaGithub />
             </a>
           </span>
