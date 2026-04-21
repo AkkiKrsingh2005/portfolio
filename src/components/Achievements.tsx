@@ -20,7 +20,7 @@ const Achievements = () => {
               </div>
             </div>
             <p>
-              Successfully contributed <strong>35+ Pull Requests</strong> to major projects like Vue.js, React Native, and Webpack. Focused on documentation and core fixes to improve developer experience. 
+              Authored and dynamically submitted <strong>35+ Pull Requests</strong> to major projects like Vue.js, React Native, and Webpack. Focused on documentation and core fixes to improve developer experience. 
               {" "}
               <a 
                 href="https://github.com/pulls?q=is%3Apr+author%3AAkkiKrsingh2005+is%3Apublic" 
