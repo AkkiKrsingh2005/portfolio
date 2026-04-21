@@ -50,6 +50,17 @@ const projects = [
     accent: "#fb923c"
   },
   {
+    title: "AI E-Commerce Architecture (Amazone)",
+    category: "Full-Stack & Data pipelines",
+    description: "An ultra-modern, dynamic shopping interface mimicking high-level market UX schemas, architected with scalable tracking metrics to ingest collaborative-filtering AI recommender systems.",
+    tags: ["HTML5", "CSS3", "JavaScript ES6", "Session Tracking"],
+    image: "/images/amazone_ecommerce.png",
+    github: "https://github.com/ankitkumar572005/Shopping_Cart",
+    demo: null,
+    pinned: false,
+    accent: "#f59e0b"
+  },
+  {
     title: "Foodies Travel Map",
     category: "Web Application",
     description: "An interactive web app for discovering and mapping food destinations with an intuitive, location-driven UI.",
