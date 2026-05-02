@@ -4,6 +4,17 @@ import WorkImage from "./WorkImage";
 
 const projects = [
   {
+    title: "SmartFinance Dashboard",
+    category: "Full-Stack Development",
+    description: "A professional-grade personal finance tracker with real-time analytics. Built with a Node.js/Express REST API, React frontend, and a relational SQLite database.",
+    tags: ["React", "Node.js", "Express", "SQLite", "REST API"],
+    image: "/images/smart_finance.png",
+    github: "https://github.com/ankitkumar572005/SmartFinance-App",
+    demo: "https://github.com/ankitkumar572005/SmartFinance-App",
+    pinned: true,
+    accent: "#4f46e5"
+  },
+  {
     title: "AI Crowd Density Analyzer",
     category: "AI & Computer Vision",
     description: "A real-time Computer Vision system utilizing YOLOv8 for human detection and tracking. Features dynamic density alerting and Streamlit web deployment.",
