@@ -4,16 +4,15 @@ import WorkImage from "./WorkImage";
 
 const projects = [
   {
-    title: "Smart Traffic Monitoring System",
+    title: "AI Crowd Density Analyzer",
     category: "AI & Computer Vision",
-    description: "A comprehensive real-time traffic analysis system utilizing YOLOv8 for vehicle trajectory tracking, DeepSORT for stable IDs, and EasyOCR for fallback license plate detection.",
-    tags: ["OpenCV", "YOLOv8", "DeepSORT", "EasyOCR", "Python"],
-    image: "/images/smart_traffic.png",
-    video: "traffic_demo.mp4",
-    github: "https://github.com/ankitkumar572005/Smart-Traffic-System",
-    demo: "https://smart-traffic-system-mpm6axqd6hd9jblrjkiiyd.streamlit.app/",
+    description: "A real-time Computer Vision system utilizing YOLOv8 for human detection and tracking. Features dynamic density alerting and Streamlit web deployment.",
+    tags: ["OpenCV", "YOLOv8", "Streamlit", "Python"],
+    image: "/images/crowd_analysis.jpg",
+    github: "https://github.com/ankitkumar572005/crowd-analysis-ai",
+    demo: "https://crowd-analysis-ai.streamlit.app/",
     pinned: true,
-    accent: "#ef4444"
+    accent: "#3b82f6"
   },
   {
     title: "AI RAG Navigator",
