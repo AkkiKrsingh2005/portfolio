@@ -10,7 +10,7 @@ const projects = [
     tags: ["React", "Node.js", "Express", "SQLite", "REST API"],
     image: "/images/smart_finance.png",
     github: "https://github.com/ankitkumar572005/SmartFinance-App",
-    demo: "https://github.com/ankitkumar572005/SmartFinance-App",
+    demo: "https://smartfinance-app.vercel.app",
     pinned: true,
     accent: "#4f46e5"
   },
