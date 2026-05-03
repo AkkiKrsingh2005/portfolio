@@ -40,24 +40,28 @@ const projects = [
 
 const openSourceContributions = [
   {
+    repo: "npm/node-semver",
+    status: "Merged",
+    description: "Successfully merged a documentation fix for one of the most critical packages in the Node.js ecosystem.",
+    url: "https://github.com/npm/node-semver/pull/735" 
+  },
+  {
+    repo: "AyushAnand-28/ChurnSight",
+    status: "Merged",
+    description: "Contributed core feature engineering logic to an AI-driven churn prediction system.",
+    url: "https://github.com/AyushAnand-28/ChurnSight/pull/11"
+  },
+  {
     repo: "facebook/react-native",
-    description: "Contributed to core documentation quality for one of the world's most popular mobile frameworks.",
+    status: "In Review",
+    description: "Contributing to core documentation quality for the world's most popular mobile framework.",
     url: "https://github.com/facebook/react-native/pull/56280"
   },
   {
     repo: "vuejs/vue",
-    description: "Helping maintain the documentation for the Vue 2 core, ensuring consistency for millions of developers.",
+    status: "In Review",
+    description: "Maintaining documentation for the Vue 2 core, ensuring consistency for millions of developers.",
     url: "https://github.com/vuejs/vue/pull/13330"
-  },
-  {
-    repo: "jestjs/jest",
-    description: "Refining documentation for the most used JavaScript testing framework.",
-    url: "https://github.com/jestjs/jest/pull/16019"
-  },
-  {
-    repo: "npm/cli",
-    description: "Active contributor to the Node Package Manager CLI documentation.",
-    url: "https://github.com/npm/cli/pull/9165"
   }
 ];
 
@@ -116,19 +120,22 @@ const Work = () => {
         {/* New Open Source Section */}
         <div className="os-section">
           <h2 className="section-title">🔥 Open Source Contributions</h2>
-          <p className="os-intro">Active contributor to some of the world's most impactful developer tools.</p>
+          <p className="os-intro">Active contributor with merged code in global developer tools.</p>
           <div className="os-grid">
             {openSourceContributions.map((os, i) => (
               <a href={os.url} target="_blank" rel="noreferrer" key={i} className="os-card">
-                <div className="os-repo">{os.repo}</div>
+                <div className="os-header">
+                  <div className="os-repo">{os.repo}</div>
+                  <span className={`os-status ${os.status.toLowerCase().replace(' ', '-')}`}>{os.status}</span>
+                </div>
                 <p className="os-desc">{os.description}</p>
-                <span className="os-view">View PR ↗</span>
+                <span className="os-view">View Impact ↗</span>
               </a>
             ))}
           </div>
           <div className="os-footer">
             <a href="https://github.com/ankitkumar572005?tab=stars" target="_blank" rel="noreferrer" className="os-more">
-              See 15+ more contributions on GitHub
+              See 20+ more contributions on GitHub
             </a>
           </div>
         </div>
