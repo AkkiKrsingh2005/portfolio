@@ -1,11 +1,309 @@
+/* ── Work Section ── */
+.work-section {
+  position: relative;
+  z-index: 1;
+  background-color: var(--backgroundColor);
+}
+
+/* ── Fixed Title Bar ── */
+.work-title-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  padding: 32px var(--sectionPadding, 80px) 0;
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  pointer-events: none;
+}
+
+.work-title-bar h2 {
+  font-size: 52px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1;
+}
+
+.work-title-bar h2 > span {
+  color: var(--accentColor);
+}
+
+.work-subtitle {
+  font-size: 14px;
+  color: rgba(255,255,255,0.3);
+  font-weight: 300;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+/* ── Side Dot Navigation ── */
+.side-dots {
+  position: fixed;
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.side-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.25);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.side-dot-pinned {
+  border-color: rgba(94, 234, 212, 0.4);
+}
+
+.side-dot:hover {
+  border-color: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,0.2);
+}
+
+.side-dot-active {
+  width: 8px;
+  height: 28px;
+  border-radius: 50px;
+}
+
+/* ── Scroll-Snap Container ── */
+.snap-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hide scrollbar but keep scroll functionality */
+.snap-container::-webkit-scrollbar { display: none; }
+.snap-container { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* ── Each Project Slide ── */
+.snap-slide {
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 var(--sectionPadding, 80px);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* ── Slide Inner Layout ── */
+.slide-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 80px; /* offset for title bar */
+}
+
+/* ── Left Info Panel ── */
+.slide-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.slide-number {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1;
+  opacity: 0.12;
+  margin-bottom: -8px;
+  letter-spacing: -2px;
+}
+
+/* ── Pinned Badge ── */
+.pinned-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 50px;
+  width: fit-content;
+}
+
+.pinned-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  animation: pulse-dot 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.6); }
+}
+
+/* ── Title & Category ── */
+.slide-title {
+  font-size: 48px;
+  font-weight: 900;
+  margin: 4px 0 0;
+  line-height: 1.1;
+  color: #fff;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
+
+.slide-category {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  opacity: 0.85;
+}
+
+.slide-description {
+  font-size: 15px;
+  font-weight: 300;
+  color: #a0a0a0;
+  line-height: 1.7;
+  margin: 8px 0 0;
+  max-width: 480px;
+}
+
+/* ── Tech Tags ── */
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.tech-tag {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid;
+  color: #c8c8c8;
+  font-size: 11px;
+  font-weight: 400;
+  padding: 4px 12px;
+  border-radius: 50px;
+  letter-spacing: 0.4px;
+  transition: all 0.25s ease;
+}
+
+.tech-tag:hover {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+/* ── CTA Buttons ── */
+.cta-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  border: none;
+}
+
+.cta-btn-outline {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.18) !important;
+  color: #e0e0e0;
+}
+
+.cta-btn-outline:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: rgba(255,255,255,0.4) !important;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.cta-btn-primary {
+  color: #000;
+}
+
+.cta-btn-primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  color: #000;
+}
+
+/* ── Right Image Panel ── */
+.slide-image-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+  max-height: 420px;
+}
+
+.slide-image-glow {
+  position: absolute;
+  inset: -40px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.slide-image-wrap img,
+.slide-image-wrap .work-image img {
+  max-width: 100%;
+  max-height: 380px;
+  border-radius: 16px;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.6);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  object-fit: cover;
+}
+
+.snap-slide:hover .slide-image-wrap img,
+.snap-slide:hover .slide-image-wrap .work-image img {
+  transform: scale(1.02) translateY(-4px);
+  box-shadow: 0 32px 80px rgba(0,0,0,0.7);
+}
+
+/* ── Open Source Section ── */
 .os-section {
   margin-top: 4rem;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid rgba(255,255,255,0.1);
   padding-top: 3rem;
+  width: 100%;
 }
 
 .os-intro {
-  color: var(--text-muted);
+  color: #a0a0a0;
   margin-bottom: 2rem;
   font-size: 1.1rem;
 }
@@ -17,8 +315,8 @@
 }
 
 .os-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 12px;
   padding: 1.5rem;
   text-decoration: none;
@@ -32,6 +330,7 @@
   transform: translateY(-5px);
   border-color: #3b82f6;
   box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.2);
+  background: rgba(255,255,255,0.05);
 }
 
 .os-header {
@@ -67,7 +366,7 @@
 }
 
 .os-desc {
-  color: var(--text-main);
+  color: #e0e0e0;
   font-size: 0.95rem;
   line-height: 1.5;
   margin-bottom: 1.25rem;
@@ -76,7 +375,7 @@
 .os-view {
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--text-muted);
+  color: #808080;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -100,4 +399,37 @@
 .os-more:hover {
   background: #3b82f6;
   color: white;
+}
+
+/* ── Scroll Hint ── */
+.scroll-hint {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: opacity 0.3s;
+}
+
+/* ── Responsive ── */
+@media only screen and (max-width: 1024px) {
+  .slide-inner {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-top: 100px;
+  }
+  .snap-slide { height: 100vh; padding: 0 40px; }
+  .slide-title { font-size: 32px; }
+}
+
+@media only screen and (max-width: 600px) {
+  .snap-slide { padding: 0 20px; }
+  .slide-title { font-size: 28px; }
+  .work-title-bar h2 { font-size: 32px; }
 }
