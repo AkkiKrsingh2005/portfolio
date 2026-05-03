@@ -1,8 +1,21 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import "./styles/Work.css";
 import WorkImage from "./WorkImage";
 
-const projects = [
+interface Project {
+  title: string;
+  category: string;
+  description: string;
+  tags: string[];
+  image: string;
+  github: string;
+  demo: string;
+  pinned: boolean;
+  accent: string;
+  demoLabel?: string;
+}
+
+const projects: Project[] = [
   {
     title: "AI Crowd Density Analyzer",
     category: "AI & Computer Vision",
@@ -95,7 +108,7 @@ const Work = () => {
           {filteredProjects.map((project, index) => (
             <div className="project-card" key={index} style={{ "--accent": project.accent } as any}>
               <div className="project-image-container">
-                <WorkImage src={project.image} alt={project.title} />
+                <WorkImage image={project.image} alt={project.title} />
               </div>
               <div className="project-content">
                 <div className="project-category">{project.category}</div>
