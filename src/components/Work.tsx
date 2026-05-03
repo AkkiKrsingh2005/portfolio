@@ -19,7 +19,7 @@ const projects = [
     category: "Full-Stack Development",
     description: "A comprehensive analytics platform for financial tracking. Architected with a Node.js/Express REST API and a relational SQLite engine. Features a unique Offline-First architecture for 100% demo availability.",
     tags: ["React", "Node.js", "Express", "SQLite", "REST API"],
-    image: "https://images.unsplash.com/photo-1551288049-bbbda536339a?auto=format&fit=crop&q=80&w=1000",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000",
     github: "https://github.com/ankitkumar572005/SmartFinance-App",
     demo: "https://smartfinance-app.vercel.app",
     pinned: true,
