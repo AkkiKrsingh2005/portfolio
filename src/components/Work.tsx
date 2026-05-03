@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./styles/Work.css";
 import WorkImage from "./WorkImage";
 
@@ -35,40 +35,29 @@ const projects = [
     demo: "https://akkikrsingh2005-ai-rag-navigator-app-5gfm3y.streamlit.app/",
     pinned: true,
     accent: "#5eead4"
+  }
+];
+
+const openSourceContributions = [
+  {
+    repo: "facebook/react-native",
+    description: "Contributed to core documentation quality for one of the world's most popular mobile frameworks.",
+    url: "https://github.com/facebook/react-native/pull/56280"
   },
   {
-    title: "Plant Health Vision",
-    category: "Computer Vision & Deep Learning",
-    description: "A production-ready CNN-based application that detects 20+ plant diseases in real-time. Delivers instant diagnosis and actionable care recommendations.",
-    tags: ["TensorFlow 2.21", "MobileNetV2", "OpenCV", "Streamlit", "Python 3.13"],
-    image: "/images/plant_health.png",
-    github: "https://github.com/AkkiKrsingh2005/plant-health-vision",
-    demo: "https://akkikrsingh2005-plant-health-vision-app-cuhriy.streamlit.app/",
-    pinned: true,
-    accent: "#34d399"
+    repo: "vuejs/vue",
+    description: "Helping maintain the documentation for the Vue 2 core, ensuring consistency for millions of developers.",
+    url: "https://github.com/vuejs/vue/pull/13330"
   },
   {
-    title: "AI Gesture OS Control",
-    category: "Human-Computer Interaction (HCI)",
-    description: "A real-time HCI system that maps hand landmarks to OS-level controls. Features sub-20ms latency cursor tracking and pinch-to-click gesture recognition.",
-    tags: ["MediaPipe Tasks API", "OpenCV", "PyAutoGUI", "Apple M3 Optimized"],
-    image: "/images/gesture_control.png",
-    github: "https://github.com/AkkiKrsingh2005/ai-gesture-os-control",
-    demo: "https://github.com/AkkiKrsingh2005/ai-gesture-os-control",
-    demoLabel: "📂 View Project",
-    pinned: true,
-    accent: "#fb923c"
+    repo: "jestjs/jest",
+    description: "Refining documentation for the most used JavaScript testing framework.",
+    url: "https://github.com/jestjs/jest/pull/16019"
   },
   {
-    title: "AI E-Commerce Architecture (Amazone)",
-    category: "Full-Stack & Data pipelines",
-    description: "An ultra-modern, dynamic shopping interface mimicking high-level market UX schemas, architected with scalable tracking metrics to ingest collaborative-filtering AI recommender systems.",
-    tags: ["HTML5", "CSS3", "JavaScript ES6", "Session Tracking"],
-    image: "/images/amazone_ecommerce.png",
-    github: "https://github.com/AkkiKrsingh2005/amazone-ecommerce",
-    demo: "https://akkikrsingh2005.github.io/amazone-ecommerce/",
-    pinned: true,
-    accent: "#f59e0b"
+    repo: "npm/cli",
+    description: "Active contributor to the Node Package Manager CLI documentation.",
+    url: "https://github.com/npm/cli/pull/9165"
   }
 ];
 
@@ -84,7 +73,7 @@ const Work = () => {
     <section className="work-section" id="work" ref={sectionRef}>
       <div className="container">
         <div className="section-header">
-          <h2 className="section-title">My Work</h2>
+          <h2 className="section-title">Featured Projects</h2>
           <div className="tab-filters">
             {["all", "AI", "Full-Stack"].map((tab) => (
               <button 
@@ -122,6 +111,26 @@ const Work = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* New Open Source Section */}
+        <div className="os-section">
+          <h2 className="section-title">🔥 Open Source Contributions</h2>
+          <p className="os-intro">Active contributor to some of the world's most impactful developer tools.</p>
+          <div className="os-grid">
+            {openSourceContributions.map((os, i) => (
+              <a href={os.url} target="_blank" rel="noreferrer" key={i} className="os-card">
+                <div className="os-repo">{os.repo}</div>
+                <p className="os-desc">{os.description}</p>
+                <span className="os-view">View PR ↗</span>
+              </a>
+            ))}
+          </div>
+          <div className="os-footer">
+            <a href="https://github.com/ankitkumar572005?tab=stars" target="_blank" rel="noreferrer" className="os-more">
+              See 15+ more contributions on GitHub
+            </a>
+          </div>
         </div>
       </div>
     </section>
